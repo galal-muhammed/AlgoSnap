@@ -32,7 +32,74 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.box {
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: #ffffff;
+  color: white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.active {
+  background-color: mediumslateblue;
+  border-color: mediumslateblue;
+  color: white !important;
+}
+
+.da {
+  background-color: #676c6c;
+  border-color: #676c6c !important;
+  color: white !important;
+}
+
+.found {
+  background-color: green;
+  border-color: green;
+  color: white !important;
+}
+
+.ptr::after {
+  width: 10px;
+  height: 7px;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid red;
+  position: absolute;
+  bottom: -9px;
+}
+
+.node__branch>circle {
+  fill: black;
+  r: 10
+}
+
+.node__root>circle {
+  fill: black;
+  r: 10
+}
+
+.node__leaf>circle {
+  fill: black;
+  r: 10
+}
+

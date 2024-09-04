@@ -1,0 +1,44 @@
+.gridbox {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(209, 209, 209);
+    border: 1px black solid;
+    color: black;
+    display: flex;
+    justify-content: end;
+    font-size: 10px;
+    align-items: end;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.nodeswrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.customwidth {
+    max-width: 1400px;
+    max-height: 600px;
+}
+
+.visted {
+    background: teal;
+}
+
+.path {
+    background-color: yellow;
+}
+
+.start {
+    background-color: brown;
+}
+
+.end {
+    background-color: green;
+}
+
+.wall {
+    background-color: black;
+    color: white;
+}
