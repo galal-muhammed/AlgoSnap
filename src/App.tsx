@@ -12,9 +12,9 @@ function App() {
     {
       path: '/', children: [
         { index: true, element: <Home /> },
-        { path: '/search', element: < Search /> },
-        { path: '/BT', element: < BinaryTree /> },
-        { path: '/SP', element : < Path /> }
+        { path: 'search', element: < Search /> },
+        { path: 'BT', element: < BinaryTree /> },
+        { path: 'SP', element : < Path /> }
       ]
     }
   ])
