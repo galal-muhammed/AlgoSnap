@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AlgoSnap/static/css/main.a5c91b64.css",
-    "main.js": "/AlgoSnap/static/js/main.1be36bd4.js",
+    "main.js": "/AlgoSnap/static/js/main.ddba04b0.js",
     "static/js/453.353644a0.chunk.js": "/AlgoSnap/static/js/453.353644a0.chunk.js",
     "index.html": "/AlgoSnap/index.html",
     "main.a5c91b64.css.map": "/AlgoSnap/static/css/main.a5c91b64.css.map",
-    "main.1be36bd4.js.map": "/AlgoSnap/static/js/main.1be36bd4.js.map",
+    "main.ddba04b0.js.map": "/AlgoSnap/static/js/main.ddba04b0.js.map",
     "453.353644a0.chunk.js.map": "/AlgoSnap/static/js/453.353644a0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5c91b64.css",
-    "static/js/main.1be36bd4.js"
+    "static/js/main.ddba04b0.js"
   ]
 }
