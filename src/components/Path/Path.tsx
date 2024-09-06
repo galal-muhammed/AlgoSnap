@@ -7,7 +7,8 @@ import PathNodeType from '../../types/PathNodeType';
 
 const Path = () => {
 
-    const area = { x: 10, y: Math.floor((window.innerWidth - 128) / 40) };
+    const area = {
+        x: 10, y: window.innerWidth > 1400 ? Math.floor((window.innerWidth - 128) / 40) : Math.floor((window.innerWidth) / 40)};
     const [toggle, setToggle] = useState('s')
     const [funcction, setfuncction] = useState('BFS')
     const [Update, setIsUpdate] = useState<boolean>(false)
@@ -315,7 +316,7 @@ const Path = () => {
     return (
         <div className='min-h-screen flex-col text-white flex md:flex-col py-5 justify-center'>
             <Toaster />
-            <div className='flex flex-row '>
+            <div className='flex md:flex-row flex-col md:items-start items-center '>
                 <div className='mx-5'>
                     <label htmlFor="toggleType" className="block mb-2 text-sm font-medium  text-white">What do you want to select?</label>
                     <select id="toggleType" onChange={(event) => { changeToogleNode(event) }} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5  ">
@@ -324,28 +325,28 @@ const Path = () => {
                         <option value="w">wall</option>
                     </select>
                 </div>
-                <div className='mx-5'>
+                <div className='md:mx-5'>
                     <label htmlFor="toggleType" className="block mb-2 text-sm font-medium  text-white">What do you want to select?</label>
                     <select id="toggleType" onChange={(event) => { changeSearchType(event) }} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5  ">
                         <option value="BFS">BFS</option>
                         <option value="DFS">DFS</option>
                     </select>
                 </div>
-                <div className='mt-6'>
+                <div className='mt-6 md:mx-5'>
                     <button onClick={() => {
                         if (funcction == "BFS") visualizeBFS()
                         else if (funcction == "DFS") visualizeDFS()
-                    }} type='submit' className={` bg-blue-500 hover:bg-blue-700 text-white w- font-bold w-64  py-2 px-4 rounded-full`}>
+                    }} type='submit' className={` bg-blue-500 hover:bg-blue-700 text-white  font-bold w-64  py-2 px-4 rounded-full`}>
                         Start Searching
                     </button>
                 </div>
-                <div className='mt-6 mx-5'>
-                    <button onClick={() => { clearNodes() }} type='submit' className={` bg-red-600 hover:bg-red-600 text-white w- font-bold w-64  py-2 px-4 rounded-full`}>
+                <div className='mt-6 '>
+                    <button onClick={() => { clearNodes() }} type='submit' className={` bg-red-600 hover:bg-red-600 text-white  font-bold w-64  py-2 px-4 rounded-full`}>
                         clearNodes
                     </button>
                 </div>
             </div>
-            <div className="nodeswrapper customwidth">
+            <div className="nodeswrapper customwidth md:mt-0 mt-5 md:ml-0 ml-2">
                 {
                     nodes.map((rows) => {
                         return <> {rows.map(obj => {

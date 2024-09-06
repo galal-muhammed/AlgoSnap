@@ -33,18 +33,18 @@ const BinaryTree = () => {
     function traverse(obj: TNode | null): any[] | undefined | RawNodeDatum {
         if (obj == undefined) return [];
 
-        if (obj.left) {
+        if (obj.left!=null) {
             traverse(obj.left);
         }
 
-        if (obj.value) {
+        if (obj.value!=null) {
             let children: any[] = [];
 
-            if (obj.left) {
+            if (obj.left!=null) {
                 children = [...children, traverse(obj.left)];
             }
 
-            if (obj.right) {
+            if (obj.right!=null) {
                 children = [...children, traverse(obj.right)];
             }
 
@@ -54,7 +54,7 @@ const BinaryTree = () => {
             }
 
         }
-        if (obj.right) {
+        if (obj.right!=null) {
             traverse(obj.right);
         }
     }
@@ -169,13 +169,13 @@ const BinaryTree = () => {
                     break;
                 }
                 if (node.value < current.value) {
-                    if (!current.left) {
+                    if (current.left==null) {
                         current.left = node;
                         break;
                     }
                     current = current.left;
                 } else if (node.value > current.value) {
-                    if (!current.right) {
+                    if (current.right==null) {
                         current.right = node;
                         break;
                     }
@@ -243,7 +243,7 @@ const BinaryTree = () => {
                         <input type="number" id="num" onChange={formik.handleChange} onBlur={formik.handleBlur} className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-200-500 focus:border-blue-500 block w-64 p-2.5 outline-none`} defaultValue={0} required />
                     </div>
                     <div className='mb-5'>
-                        <label htmlFor="function" className="block mb-2 text-sm font-medium  text-white">Choose Searching Algorithm</label>
+                        <label htmlFor="function" className="block mb-2 text-sm font-medium  text-white">Choose Operation</label>
                         <select id="function" onChange={formik.handleChange} onBlur={formik.handleBlur} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5  ">
                             <option value="add">Insert</option>
                             <option value="Pre-O">Pre-order Traversal</option>
@@ -296,7 +296,7 @@ const BinaryTree = () => {
                     <Tree data={tree}
                         translate={
                             {
-                                x: 400,
+                                x: window.innerWidth/3,
                                 y: 100
                             }}
                         orientation='vertical'

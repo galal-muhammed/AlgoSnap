@@ -16,16 +16,6 @@ const Home = () => {
                 </a>
             </div>
             <div>
-                <a href="/sort">
-                    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-cardD">
-                        <img className="w-full" src="https://visualgo.net/img/gif/sorting.gif" alt="Sunset in the mountains" />
-                        <div className="px-6 py-4 text-center">
-                            <div className="font-bold text-xl mb-2">Sorting</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div>
                 <a href="/BT">
                     <div className="max-w-sm rounded overflow-hidden shadow-lg bg-cardD">
                         <img className="w-full" src="https://visualgo.net/img/gif/heap.gif" alt="Sunset in the mountains" />
